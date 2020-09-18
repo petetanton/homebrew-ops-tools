@@ -1,12 +1,42 @@
 class OpsWatcher < Formula
   desc "Provides OSX push notifications for JIRA"
   homepage "https://github.com/petetanton/ops-watcher"
-  url "https://github.com/petetanton/ops-watcher/releases/download/0.0.1/ops-watcher-darwin-amd64.zip"
-  sha256 "439a402f9c09ae6227c01f957a15064b7ffd42227061e450dfc497c81449f51b"
+  url "https://github.com/petetanton/ops-watcher/releases/download/v0.0.2/ops-watcher-darwin-amd64.zip"
+  sha256 "1e3a8779eb2f585e1bc421fcbad7b48223ce453325cae9002c472829c90efb3d"
   license ""
 
   def install
     bin.install "ops-watcher-darwin-amd64" => "ops-watcher"
+  end
+
+  def post_install
+    (var/"log/ops-watcher").mkpath
+  end
+
+  plist_options manual: "ops-watcher"
+
+
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>KeepAlive</key>
+        <true/>
+        <key>Label</key>
+        <string>homebrew.mxcl.ops-watcherl</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>/usr/local/opt/ops-watcher/bin/ops-watcher</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>WorkingDirectory</key>
+        <string>/usr/local/var/</string>
+      </dict>
+      </plist>
+    EOS
   end
 
   test do
