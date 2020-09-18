@@ -5,6 +5,8 @@ class OpsWatcher < Formula
   sha256 "1e3a8779eb2f585e1bc421fcbad7b48223ce453325cae9002c472829c90efb3d"
   license ""
 
+  depends_on "terminal-notifier"
+
   def install
     bin.install "ops-watcher-darwin-amd64" => "ops-watcher"
   end
