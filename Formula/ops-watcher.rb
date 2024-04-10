@@ -15,30 +15,11 @@ class OpsWatcher < Formula
     (var/"log/ops-watcher").mkpath
   end
 
-  plist_options manual: "ops-watcher"
-
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>KeepAlive</key>
-        <true/>
-        <key>Label</key>
-        <string>homebrew.mxcl.ops-watcherl</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>/usr/local/opt/ops-watcher/bin/ops-watcher</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>WorkingDirectory</key>
-        <string>/usr/local/var/</string>
-      </dict>
-      </plist>
-    EOS
+  service do
+    run ["/usr/local/opt/ops-watcher/bin/ops-watcher"]
+    working_dir "/usr/local/var/"
+    log_path var/"log/ops-watcher/ops-watcher.log"
+    error_log_path var/"log/ops-watcher/ops-watcher.log"
   end
 
   test do
