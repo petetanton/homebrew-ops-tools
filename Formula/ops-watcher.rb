@@ -2,7 +2,7 @@ class OpsWatcher < Formula
   desc "Provides OSX push notifications for JIRA"
   homepage "https://github.com/petetanton/ops-watcher"
   url "https://github.com/petetanton/ops-watcher/releases/download/v0.0.3/ops-watcher-darwin-amd64.zip"
-  sha256 "ab26a89810f28df18aca53bf7c8b99db13092d042f4dba0035e15753a3d35e03"
+  sha256 "0a2f5b9c8af0501dee2d7b7998ef0ae676bdcc56f1ac80cd2d2f47bd8d547231"
   license ""
 
   depends_on "terminal-notifier"
