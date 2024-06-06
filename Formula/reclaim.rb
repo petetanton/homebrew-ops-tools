@@ -13,12 +13,6 @@ class Reclaim < Formula
     (var/"log/reclaim-cli").mkpath
   end
 
-  service do
-    run ["/usr/local/opt/reclaim-cli/bin/reclaim-cli"]
-    working_dir "/usr/local/var/"
-    log_path var/"log/reclaim-cli/reclaim-cli.log"
-    error_log_path var/"log/reclaim-cli/reclaim-cli.log"
-  end
 
   test do
     # `test do` will create, run in and delete a temporary directory.
