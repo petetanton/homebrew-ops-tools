@@ -6,7 +6,7 @@ class Reclaim < Formula
   license ""
 
   def install
-    bin.install "reclaim-cli-darwin-amd64" => "ops-watcher"
+    bin.install "reclaim-cli_v0.0.2" => "reclaim"
   end
 
   def post_install
