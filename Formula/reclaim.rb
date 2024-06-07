@@ -1,8 +1,8 @@
 class Reclaim < Formula
   desc "Command line tool for reclaim.ai"
   homepage "https://github.com/petetanton/reclaim-cli"
-  url "https://github.com/petetanton/reclaim-cli/archive/refs/tags/v0.0.3.tar.gz"
-  sha256 "932a7e6de69f2fc759aee1c54ce0656bcb0b937f428bb85baba187077d10da8d"
+  url "https://github.com/petetanton/reclaim-cli/archive/refs/tags/v0.0.8.tar.gz"
+  sha256 "ef4408d660900eded6d47f6adcddda1b47118fe6a8f1c4d9ccf3ead6681c2243"
   license ""
 
   def install
