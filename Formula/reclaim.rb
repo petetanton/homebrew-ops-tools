@@ -1,8 +1,8 @@
 class Reclaim < Formula
   desc "Command line tool for reclaim.ai"
   homepage "https://github.com/petetanton/reclaim-cli"
-  url "https://github.com/petetanton/reclaim-cli/releases/download/v0.0.10/reclaim-cli_0.0.10_darwin_arm64.zip"
-  sha256 "a220c17ae7ba683a1f8c01d0aa61e36eb83e2633d8d7349ede5f5e6de102a882"
+  url "https://github.com/petetanton/reclaim-cli/releases/download/v0.0.11/reclaim-cli_0.0.11_darwin_arm64.zip"
+  sha256 "613b0b0bda98d75d68babb344da2d081269685318009e01257c2fde637f13113"
   license ""
 
   def install
