@@ -6,7 +6,7 @@ class Reclaim < Formula
   license ""
 
   def install
-    bin.install "reclaim-cli_v0.0.10" => "reclaim"
+    bin.install "reclaim-cli_v0.0.11" => "reclaim"
   end
 
   def post_install
